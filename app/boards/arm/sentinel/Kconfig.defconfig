@@ -1,0 +1,49 @@
+# Copyright (c) 2024 ai03 Design Studio
+# SPDX-License-Identifier: MIT
+
+if BOARD_SENTINEL_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "Sentinel"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config BT_MAX_CONN
+    default 4
+
+config BT_MAX_PAIRED
+    default 4
+
+config ZMK_USB
+	default y
+
+endif # BOARD_SENTINEL_LEFT
+
+
+if BOARD_SENTINEL_LEFT || BOARD_SENTINEL_RIGHT
+
+config BOARD
+    default "SENTINEL"
+
+config ZMK_SPLIT
+    default y
+
+config BT_CTLR
+    default BT
+
+config ZMK_BLE
+    default y
+
+if USB
+
+config USB_NRFX
+    default y
+
+config USB_DEVICE_STACK
+    default y
+
+endif # USB
+
+
+endif # if BOARD_SENTINEL_LEFT || BOARD_SENTINEL_RIGHT

@@ -1,0 +1,14 @@
+file_format: "1"
+id: sentinel
+name: Sentinel
+type: board
+arch: arm
+features:
+  - keys
+outputs:
+  - usb
+  - ble
+url: https://ai03.com/
+siblings:
+  - sentinel_left
+  - sentinel_right
